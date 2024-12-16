@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/main"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Mis Clases</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="openCreateClass()">Agregar Clase</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Clases Programadas</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <!-- Lista de Clases -->
+      <ion-list>
+        <ion-item *ngFor="let clase of clases">
+          <ion-label>
+            <h2>{{ clase.asignaturaNombre }}</h2>
+            <p>{{ clase.dia }}</p>
+          </ion-label>
+          <ion-buttons slot="end">
+            <ion-button (click)="openAsistencia()">Registrar Asistencia</ion-button>
+          </ion-buttons>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

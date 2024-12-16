@@ -1,0 +1,78 @@
+/* Fondo principal */
+.asistencia-container {
+  background-color: transparent; /* Color de fondo */
+  color: #ffffff; /* Color de texto */
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 10px; /* Ajusta esto si el espacio superior sigue siendo grande */
+  height: 100%; /* Asegura que ocupe toda la altura disponible */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Asegura que el contenido no esté centrado */
+}
+
+/* Títulos */
+h2 {
+  color: #ffffff;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 0; /* Elimina espacio adicional en la parte superior */
+}
+
+p {
+  color: #ffffff;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 0; /* Elimina espacio adicional en la parte superior */
+}
+
+/* Tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #0a223b; /* Borde de la tabla */
+}
+
+th {
+  background-color: #0a223b; /* Fondo para encabezados */
+  color: #ffffff;
+}
+
+tr:nth-child(even) {
+  background-color: #0d4179; /* Fondo alternativo para filas */
+}
+
+tr:nth-child(odd) {
+  background-color: #0a223b; /* Fondo alternativo para filas */
+}
+
+/* Botones */
+button {
+  background-color: #ffffff; /* Fondo blanco */
+  color: #0d4179; /* Texto azul */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #0a223b; /* Cambio de fondo al pasar el mouse */
+  color: #ffffff; /* Cambio de color de texto al pasar el mouse */
+}
+
+/*Scroll*/
+.scrollable-list {
+  max-height: 600px; /* Ajusta la altura según necesites */
+  overflow-y: auto; /* Activa el scroll vertical */
+  border: 1px solid #ccc; /* Opcional, para darle borde */
+  margin-top: 0; /* Asegura que no haya espacio adicional en la parte superior */
+  flex-grow: 1; /* Hace que el contenedor con scroll ocupe todo el espacio restante */
+}

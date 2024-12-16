@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/main"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-content>
+      <div class="profile-container">
+        <!-- Foto de perfil -->
+        <div class="profile-picture">
+          <img src="../../assets/gatobonito.png" alt="Foto de perfil" class="profile-img" />
+        </div>
+
+        <!-- Información del perfil -->
+        <ion-item>
+          <ion-input 
+            [(ngModel)]="nombre" 
+            placeholder="Nombre"
+          ></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input 
+            type="email" 
+            [(ngModel)]="email" 
+            placeholder="Correo Electrónico"
+          ></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input 
+            type="password" 
+            [(ngModel)]="password" 
+            placeholder="Contraseña"
+          ></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input 
+            [(ngModel)]="telefono" 
+            placeholder="Teléfono"
+          ></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input 
+            [(ngModel)]="direccion" 
+            placeholder="Dirección"
+          ></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input 
+            [(ngModel)]="department" 
+            placeholder="Departamento"
+          ></ion-input>
+        </ion-item>
+
+        <!-- Botón para guardar cambios -->
+        <ion-button expand="full" (click)="guardarCambios()">Guardar</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

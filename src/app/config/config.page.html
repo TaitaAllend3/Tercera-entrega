@@ -1,0 +1,51 @@
+<!-- settings.page.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/main"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Configuraciones</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Ajustes de la Aplicación</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <!-- Contenido de la página de configuraciones -->
+      <ion-list>
+        <!-- Configuración de Perfil -->
+        <ion-item routerLink="/profile-settings">
+          <ion-icon name="person" slot="start"></ion-icon>
+          <ion-label>Configuración de Perfil</ion-label>
+        </ion-item>
+
+        <!-- Configuración de Notificaciones -->
+        <ion-item routerLink="/notification-settings">
+          <ion-icon name="notifications" slot="start"></ion-icon>
+          <ion-label>Configuración de Notificaciones</ion-label>
+        </ion-item>
+
+        <!-- Configuración de Privacidad -->
+        <ion-item routerLink="/privacy-settings">
+          <ion-icon name="lock-closed" slot="start"></ion-icon>
+          <ion-label>Configuración de Privacidad</ion-label>
+        </ion-item>
+
+        <!-- Configuración de Idioma -->
+        <ion-item routerLink="/language-settings">
+          <ion-icon name="globe" slot="start"></ion-icon>
+          <ion-label>Configuración de Idioma</ion-label>
+        </ion-item>
+
+        <!-- Configuración de Cuenta -->
+        <ion-item routerLink="/account-settings">
+          <ion-icon name="settings" slot="start"></ion-icon>
+          <ion-label>Configuración de Cuenta</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

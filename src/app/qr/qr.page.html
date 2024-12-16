@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/main"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Escanear Código QR</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="scanEnabled">
+    <ion-button (click)="checkPermissionAndStartScan()">Iniciar Escaneo</ion-button>
+  </div>
+
+  <div *ngIf="!scanEnabled">
+    <p>Código escaneado: {{ scannedCode }}</p>
+    <ion-button (click)="restartScan()">Reiniciar Escaneo</ion-button>
+  </div>
+</ion-content>

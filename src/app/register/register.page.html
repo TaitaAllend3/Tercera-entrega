@@ -1,0 +1,128 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/inicio"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registrar Profesor</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="registroForm">
+    <!-- Campo para el nombre -->
+    <ion-item>
+      <ion-input
+        type="text"
+        placeholder="Ingrese su nombre"
+        label="Nombre:"
+        labelPlacement="floating"
+        formControlName="name">
+      </ion-input>
+    </ion-item>
+    <div id="alerta" *ngIf="registroForm.get('name')?.invalid && (registroForm.get('name')?.dirty || registroForm.get('name')?.touched)">
+      <div *ngIf="registroForm.get('name')?.hasError('required')">El nombre es obligatorio</div>
+      <div *ngIf="registroForm.get('name')?.hasError('minlength')">El nombre debe tener al menos 3 caracteres</div>
+    </div>
+
+    <!-- Campo para el correo -->
+    <ion-item>
+      <ion-input
+        type="email"
+        placeholder="Ingrese su correo"
+        label="Correo:"
+        labelPlacement="floating"
+        formControlName="email">
+      </ion-input>
+    </ion-item>
+    <div id="alerta" *ngIf="registroForm.get('email')?.invalid && (registroForm.get('email')?.dirty || registroForm.get('email')?.touched)">
+      <div *ngIf="registroForm.get('email')?.hasError('required')">El correo es obligatorio</div>
+      <div *ngIf="registroForm.get('email')?.hasError('email')">El correo no es válido</div>
+    </div>
+
+    <!-- Campo para el teléfono -->
+    <ion-item>
+      <ion-input
+        type="text"
+        placeholder="Ingrese su teléfono"
+        label="Teléfono:"
+        labelPlacement="floating"
+        formControlName="phone">
+      </ion-input>
+    </ion-item>
+    <div id="alerta" *ngIf="registroForm.get('phone')?.invalid && (registroForm.get('phone')?.dirty || registroForm.get('phone')?.touched)">
+      <div *ngIf="registroForm.get('phone')?.hasError('required')">El teléfono es obligatorio</div>
+      <div *ngIf="registroForm.get('phone')?.hasError('min')">El teléfono no es válido</div>
+    </div>
+
+    <!-- Campo para la dirección -->
+    <ion-item>
+      <ion-input
+        type="text"
+        placeholder="Ingrese su dirección"
+        label="Dirección:"
+        labelPlacement="floating"
+        formControlName="address">
+      </ion-input>
+    </ion-item>
+    <div id="alerta" *ngIf="registroForm.get('address')?.invalid && (registroForm.get('address')?.dirty || registroForm.get('address')?.touched)">
+      <div *ngIf="registroForm.get('address')?.hasError('required')">La dirección es obligatoria</div>
+      <div *ngIf="registroForm.get('address')?.hasError('minlength')">La dirección debe tener al menos 5 caracteres</div>
+    </div>
+
+    <!-- Campo para la contraseña -->
+    <ion-item>
+      <ion-input
+        type="password"
+        placeholder="Ingrese su contraseña"
+        label="Contraseña:"
+        labelPlacement="floating"
+        formControlName="password">
+      </ion-input>
+    </ion-item>
+    <div id="alerta" *ngIf="registroForm.get('password')?.invalid && (registroForm.get('password')?.dirty || registroForm.get('password')?.touched)">
+      <div *ngIf="registroForm.get('password')?.hasError('required')">La contraseña es obligatoria</div>
+      <div *ngIf="registroForm.get('password')?.hasError('minlength')">La contraseña debe tener al menos 8 caracteres</div>
+      <div *ngIf="registroForm.get('password')?.hasError('pattern')">La contraseña debe contener letras y números</div>
+    </div>
+
+    <!-- Campo para el RUT -->
+    <ion-item>
+      <ion-input
+        type="text"
+        placeholder="Ingrese su RUT"
+        label="Rut:"
+        labelPlacement="floating"
+        formControlName="rut">
+      </ion-input>
+    </ion-item>
+    <div id="alerta" *ngIf="registroForm.get('rut')?.invalid && (registroForm.get('rut')?.dirty || registroForm.get('rut')?.touched)">
+      <div *ngIf="registroForm.get('rut')?.hasError('required')">El RUT es obligatorio</div>
+      <div *ngIf="registroForm.get('rut')?.hasError('pattern')">El RUT debe ser válido</div>
+    </div>
+
+    <!-- Campo para el departamento -->
+    <ion-item>
+      <ion-input
+        type="text"
+        placeholder="Ingrese la asignatura"
+        label="Asignatura:"
+        labelPlacement="floating"
+        formControlName="asignatura">
+      </ion-input>
+    </ion-item>
+    <div id="alerta" *ngIf="registroForm.get('asignatura')?.invalid && (registroForm.get('asignatura')?.dirty || registroForm.get('asignatura')?.touched)">
+      <div *ngIf="registroForm.get('asignatura')?.hasError('required')">La asignatura es obligatoria</div>
+    </div>
+
+    <!-- Botón de Registro -->
+    <div style="text-align: center; margin-top: 30px">
+      <ion-button
+        (click)="crearProfesor()"
+        [disabled]="!registroForm.valid"
+        shape="round"
+        color="primary">
+        Registrar Profesor
+      </ion-button>
+    </div>
+  </form>
+</ion-content>

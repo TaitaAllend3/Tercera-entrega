@@ -1,0 +1,72 @@
+ion-content{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/* Estilo para el contenedor principal de bienvenida */
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 20px;
+  margin-top: -100px;
+}
+
+/* Estilo para el logo */
+.header-logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.header-logo img {
+  width: 60%;
+  height: auto;
+}
+
+/* Estilo para el mensaje de bienvenida */
+.welcome-message {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.welcome-message h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.welcome-message p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Estilo para los botones */
+.button-container {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 30px;
+}
+
+.main-button {
+  margin-bottom: 10px;
+  --border-radius: 15px;
+  --background: #365fe4;
+  color: beige;
+}
+
+.secondary-button {
+  --border-radius: 15px;
+  --background: #101f50;
+  color: white;
+}
+
+ion-button {
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --font-size: 1rem;
+}
+
+h1, p{
+  color: rgb(241, 241, 241) !important;
+}

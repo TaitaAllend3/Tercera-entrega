@@ -1,0 +1,112 @@
+:root {
+  --ion-toolbar-background: #007bff; // Cambia esto al color deseado
+  --ion-toolbar-color: #007bff; // Cambia esto al color de texto deseado
+}
+
+ion-content{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Estilos para el pie de página */
+ion-footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  padding: 0; /* Asegúrate de que no haya padding */
+  margin: 0; /* Asegúrate de que no haya margen */
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+ion-card{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+h2{
+  padding-left: 20px;
+}
+
+/* Estilo para el toolbar */
+ion-toolbar.toolbar {
+  display: flex;
+  justify-content: center; /* Centra la grilla horizontalmente */
+  align-items: center; /* Centra la grilla verticalmente */
+  height: 100%; /* Asegura que el toolbar ocupe toda la altura disponible */
+}
+
+/* Estilo para el contenedor de la grilla */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* 3 columnas iguales */
+  grid-gap: 10px; /* Espacio entre los elementos de la grilla */
+  width: 100%; /* Asegura que la grilla ocupe todo el ancho del footer */
+  justify-items: center; /* Centra los elementos en cada celda de la grilla */
+}
+
+/* Estilo para el contenedor del botón QR */
+.qr-container {
+  display: flex; /* Usa flexbox para alinear el botón QR */
+  justify-content: center; /* Centra el botón QR dentro de su celda */
+  align-items: center; /* Centra el botón QR verticalmente dentro de su celda */
+}
+
+/* Estilo para el botón QR */
+.qr {
+  --padding-start: 0;
+  --padding-end: 0;
+  --border-radius: 50%; /* Asegura que el botón sea circular */
+  --background: #113963; /* Color de fondo azul */
+  --color: #ffffff; /* Color del icono */
+  height: 60px; /* Altura del botón */
+  width: 70px; /* Ancho del botón */
+  font-size: 24px; /* Tamaño del icono */
+  display: flex; /* Usa flexbox para alinear el contenido */
+  align-items: center; /* Alinea el icono verticalmente al centro */
+  justify-content: center; /* Alinea el icono horizontalmente al centro */
+  box-sizing: border-box; /* Asegura que el padding y border no afecten el tamaño */
+  border: none; /* Elimina el borde predeterminado */
+  transition: none; /* Elimina la transición para evitar movimientos inesperados */
+}
+
+/* Estilo para los botones en el toolbar */
+ion-buttons ion-button {
+  --padding-start: 0;
+  --padding-end: 0;
+  --border-radius: 50%; /* Asegura que todos los botones sean circulares */
+  --color: #ffffff; /* Color del icono */
+  height: 60px; /* Altura de los botones */
+  width: 60px; /* Ancho de los botones */
+  font-size: 24px; /* Tamaño del icono */
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+/* Ajustes para los márgenes de otros botones */
+.clases {
+  margin-left: 0;
+}
+
+.menu {
+  margin-right: 0;
+}
+
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60px; /* Ajusta el alto según sea necesario */
+}
+
+.logo-container img {
+  height: 100%;
+  width: auto; /* Mantiene la proporción de la imagen */
+  max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+  object-fit: contain; /* Asegura que la imagen se ajuste sin distorsión */
+}
+
+hr{
+  background-color: gray;
+  margin-left: 50px;
+  margin-right: 50px;
+}

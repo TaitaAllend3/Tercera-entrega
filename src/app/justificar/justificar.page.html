@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/main"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Solicitudes de Justificación</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let request of justificationRequests">
+      <ion-label>
+        <h2>Correo del Estudiante: {{ request.studentEmail }}</h2>
+        <p>Razón: {{ request.reason }}</p>
+        <p>Fecha: {{ request.date }}</p>
+      </ion-label>
+      <ion-buttons slot="end">
+        <ion-button color="success" (click)="aceptarJustificacion(request)">Aceptar</ion-button>
+        <ion-button color="danger" (click)="rechazarJustificacion(request)">Rechazar</ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/main"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Lista Asistencia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="asistencia-container">
+    <h2>{{ asignatura }}</h2>
+    <p>Profesor: {{ profesor?.username }}</p>
+    <p>Fecha: {{ fecha }}</p>
+
+    <div *ngIf="estudiantes.length === 0">
+      <p>No hay estudiantes inscritos en esta asignatura.</p>
+    </div>
+
+    <div *ngIf="estudiantes.length > 0" class="scrollable-list">
+      <table>
+        <thead>
+          <tr>
+            <th>Estudiante</th>
+            <th>Estado</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let estudiante of estudiantes">
+            <td>{{ estudiante.username }}</td>
+            <td>{{ estudiante.asistencia }}</td>
+            <td>
+              <button (click)="marcarAsistencia(estudiante.id, 'Presente')">Presente</button>
+              <button (click)="marcarAsistencia(estudiante.id, 'Ausente')">Ausente</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br>
+    <ion-button (click)="finalizarLista()" expand="block" color="success">
+      Finalizar Lista
+    </ion-button>
+  </div>
+</ion-content>

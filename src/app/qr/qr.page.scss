@@ -1,0 +1,22 @@
+.qr-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px 0;
+  }
+  
+  .qr-image {
+    width: 200px; /* Ajusta el tamaño del QR según sea necesario */
+    height: 200px;
+    border: 1px solid #ccc; /* Opcional: para darle un borde al QR */
+    border-radius: 8px; /* Opcional: para redondear las esquinas del borde */
+  }
+  
+  .qr-info {
+    text-align: center;
+  }
+  
+  .qr-info p {
+    margin: 8px 0;
+  }
+  

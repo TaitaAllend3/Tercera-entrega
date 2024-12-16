@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Iniciar Sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="loginForm">
+    <!-- Campo para el correo -->
+    <ion-item>
+      <ion-input
+        type="text"
+        placeholder="Ingrese su correo"
+        label="Correo:"
+        labelPlacement="floating"
+        formControlName="email">
+      </ion-input>
+    </ion-item>
+
+    <!-- Alerta para el campo email -->
+    <div id="alerta" *ngIf="loginForm.get('email')?.invalid && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched)">
+      <div *ngIf="loginForm.get('email')?.hasError('required')">El correo es obligatorio</div>
+      <div *ngIf="loginForm.get('email')?.hasError('email')">El correo no es válido</div>
+    </div>
+
+    <!-- Campo para la contraseña -->
+    <ion-item>
+      <ion-input
+        type="password"
+        placeholder="Ingrese su contraseña"
+        label="Contraseña:"
+        labelPlacement="floating"
+        formControlName="password">
+      </ion-input>
+    </ion-item>
+
+    <!-- Alerta para el campo password -->
+    <div id="alerta" *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)">
+      <div *ngIf="loginForm.get('password')?.hasError('required')">La contraseña es obligatoria</div>
+      <div *ngIf="loginForm.get('password')?.hasError('minlength')">La contraseña debe tener al menos 8 caracteres</div>
+    </div>
+
+    <!-- Botón de Login -->
+    <div style="text-align: center; margin-top: 30px">
+      <ion-button
+        (click)="login()"
+        [disabled]="!loginForm.valid"
+        shape="round"
+        color="primary">
+        Iniciar Sesión
+      </ion-button>
+    </div>
+  </form>
+</ion-content>
